@@ -5,7 +5,7 @@ tracked by GitHub's [linguist project][].
 This information includes basic information, including,
 but not limited to, the following:
 
-- Name
+- Language name
 - Type of language or content
 - Common extensions
 - Common aliases
