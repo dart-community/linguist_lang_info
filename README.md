@@ -30,10 +30,10 @@ the list of all languages.
 import 'package:linguist_lang_info/linguist_lang_info.dart';
 
 void main() {
-  final targetExtension = '.dart';
+  const targetExtension = '.dart';
 
   final languagesWithExtension =
-  allLanguages.where((lang) => lang.extensions.contains(targetExtension));
+      allLanguages.where((lang) => lang.extensions.contains(targetExtension));
 
   for (final lang in languagesWithExtension) {
     print('The ${lang.name} language uses the `$targetExtension` extension!');

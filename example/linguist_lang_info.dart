@@ -1,7 +1,7 @@
 import 'package:linguist_lang_info/linguist_lang_info.dart';
 
 void main() {
-  final targetExtension = '.dart';
+  const targetExtension = '.dart';
 
   final languagesWithExtension =
       allLanguages.where((lang) => lang.extensions.contains(targetExtension));
