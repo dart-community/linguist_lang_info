@@ -1,0 +1,9 @@
+# Used to configure json_serializable and its output.
+targets:
+  $default:
+    builders:
+      source_gen|combining_builder:
+        options:
+          ignore_for_file:
+            - strict_raw_type
+            - unnecessary_lambdas
