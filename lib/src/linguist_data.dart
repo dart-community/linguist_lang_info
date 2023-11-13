@@ -1,3 +1,9 @@
+// GENERATED CODE. DO NOT EDIT.
+//
+// To change the contents of this library, instead
+// update the `tool/generate.dart` tool or its source data.
+// Then run `dart run tool/generate.dart` in the root directory.
+
 import 'language_info.dart';
 
 /// A collection of languages and content types provided by linguist

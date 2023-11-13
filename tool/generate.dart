@@ -116,12 +116,14 @@ void main() {
 
   // Create the library that contains the class and static definitions.
   final dataLibrary = Library((libraryBuilder) => libraryBuilder
+    ..comments.add(_generatedLibraryComment)
     ..directives.add(Directive.import('language_info.dart'))
     ..body.add(languagesClass));
 
   // Create the library that includes a list with a reference
   // to all of the defined language information.
   final indexLibrary = Library((libraryBuilder) => libraryBuilder
+    ..comments.add(_generatedLibraryComment)
     ..directives.add(Directive.import('package:meta/meta.dart'))
     ..directives.add(Directive.import('language_info.dart'))
     ..directives.add(Directive.import('linguist_data.dart'))
@@ -189,6 +191,12 @@ final String _indexDestinationPath = path.join(
   'src',
   'language_index.dart',
 );
+
+const _generatedLibraryComment = r'''GENERATED CODE. DO NOT EDIT.
+//
+// To change the contents of this library, instead
+// update the `tool/generate.dart` tool or its source data.
+// Then run `dart run tool/generate.dart` in the root directory.''';
 
 /// Convert the specified [originalName] string
 /// to a valid Dart identifier that follows Effective Dart
