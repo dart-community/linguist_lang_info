@@ -371,7 +371,7 @@ final class LinguistLanguageEntry {
   final String? textMateScope;
   final String? group;
 
-  LinguistLanguageEntry({
+  const LinguistLanguageEntry({
     required this.linguistColor,
     required this.aliases,
     required this.extensions,

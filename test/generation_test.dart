@@ -49,7 +49,7 @@ void main() {
     });
 
     test('All language entries were generated', () {
-      final generatedAllLanguages = allLanguages;
+      const generatedAllLanguages = allLanguages;
 
       final linguistFile = File(path.join(
         'third_party',

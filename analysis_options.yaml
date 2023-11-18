@@ -1,4 +1,4 @@
-include: package:dart_flutter_team_lints/analysis_options.yaml
+include: package:night_raven_insight/analysis_options.yaml
 
 analyzer:
   language:

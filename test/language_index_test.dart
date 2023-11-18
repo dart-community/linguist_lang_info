@@ -24,7 +24,11 @@ void main() {
     });
 
     test('Is the same collection each time', () {
+      // Intentionally trying to not use const declarations,
+      // to ensure they are constant either way.
+      // ignore: prefer_const_declarations
       final first = allLanguages;
+      // ignore: prefer_const_declarations
       final second = allLanguages;
 
       expect(identical(first, second), isTrue);

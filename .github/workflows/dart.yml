@@ -2,9 +2,11 @@ name: Dart
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 env:
   PUB_ENVIRONMENT: bot.github
 
@@ -14,7 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        sdk: [ stable, beta ]
+        sdk:
+          - stable
+          - beta
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
         with:
