@@ -1,0 +1,4 @@
+[submodule "third_party/linguist"]
+	path = third_party/linguist
+	url = https://github.com/github-linguist/linguist
+	shallow = true
