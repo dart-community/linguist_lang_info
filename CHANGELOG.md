@@ -1,6 +1,7 @@
 ## 0.1.0-wip
 
 - Require Dart 3.6 or later.
+- Update linguist and regenerate index and data.
 
 ## 0.0.2
 

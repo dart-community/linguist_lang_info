@@ -467,6 +467,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Answer Set Programming" language or content type.
+  static const LanguageInfo answerSetProgramming = LanguageInfo(
+    name: 'Answer Set Programming',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.lp'],
+    filenames: [],
+    interpreters: ['clingo'],
+    linguistColor: '#A9CC29',
+    aceMode: 'prolog',
+    textMateScope: 'source.answersetprogramming',
+  );
+
+  /// The information provided by linguist about
   /// the "Ant Build System" language or content type.
   static const LanguageInfo antBuildSystem = LanguageInfo(
     name: 'Ant Build System',
@@ -524,7 +538,7 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#d12127',
     aceMode: 'apache_conf',
-    textMateScope: 'source.apache-config',
+    textMateScope: 'source.apacheconf',
   );
 
   /// The information provided by linguist about
@@ -535,6 +549,7 @@ abstract final class Language {
     aliases: [],
     extensions: [
       '.cls',
+      '.apex',
       '.trigger',
     ],
     filenames: [],
@@ -767,6 +782,22 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "B4X" language or content type.
+  static const LanguageInfo b4X = LanguageInfo(
+    name: 'B4X',
+    type: LanguageType.programming,
+    aliases: ['basic for android'],
+    extensions: ['.bas'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#00e4ff',
+    aceMode: 'text',
+    codeMirrorMode: 'vb',
+    codeMirrorMimeType: 'text/x-vb',
+    textMateScope: 'source.vba',
+  );
+
+  /// The information provided by linguist about
   /// the "BASIC" language or content type.
   static const LanguageInfo basic = LanguageInfo(
     name: 'BASIC',
@@ -778,6 +809,20 @@ abstract final class Language {
     linguistColor: '#ff0000',
     aceMode: 'text',
     textMateScope: 'source.basic',
+  );
+
+  /// The information provided by linguist about
+  /// the "BQN" language or content type.
+  static const LanguageInfo bqn = LanguageInfo(
+    name: 'BQN',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.bqn'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#2b7067',
+    aceMode: 'text',
+    textMateScope: 'source.bqn',
   );
 
   /// The information provided by linguist about
@@ -888,7 +933,10 @@ abstract final class Language {
     name: 'Bicep',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.bicep'],
+    extensions: [
+      '.bicep',
+      '.bicepparam',
+    ],
     filenames: [],
     interpreters: [],
     linguistColor: '#519aba',
@@ -933,11 +981,17 @@ abstract final class Language {
     name: 'BitBake',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.bb'],
+    extensions: [
+      '.bb',
+      '.bbappend',
+      '.bbclass',
+      '.inc',
+    ],
     filenames: [],
     interpreters: [],
     linguistColor: '#00bce4',
     aceMode: 'text',
+    textMateScope: 'source.bb',
   );
 
   /// The information provided by linguist about
@@ -1028,7 +1082,7 @@ abstract final class Language {
     aceMode: 'haskell',
     codeMirrorMode: 'haskell',
     codeMirrorMimeType: 'text/x-haskell',
-    textMateScope: 'source.haskell',
+    textMateScope: 'source.bh',
     group: 'Bluespec',
   );
 
@@ -1158,6 +1212,7 @@ abstract final class Language {
     extensions: [
       '.cs',
       '.cake',
+      '.cs.pp',
       '.csx',
       '.linq',
     ],
@@ -1371,7 +1426,7 @@ abstract final class Language {
     extensions: ['.css'],
     filenames: [],
     interpreters: [],
-    linguistColor: '#563d7c',
+    linguistColor: '#663399',
     aceMode: 'css',
     codeMirrorMode: 'css',
     codeMirrorMimeType: 'text/css',
@@ -1438,6 +1493,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Caddyfile" language or content type.
+  static const LanguageInfo caddyfile = LanguageInfo(
+    name: 'Caddyfile',
+    type: LanguageType.data,
+    aliases: ['Caddy'],
+    extensions: ['.caddyfile'],
+    filenames: ['Caddyfile'],
+    interpreters: [],
+    linguistColor: '#22b638',
+    aceMode: 'text',
+    textMateScope: 'source.Caddyfile',
+  );
+
+  /// The information provided by linguist about
   /// the "Cadence" language or content type.
   static const LanguageInfo cadence = LanguageInfo(
     name: 'Cadence',
@@ -1463,6 +1532,22 @@ abstract final class Language {
     linguistColor: '#ff4a48',
     aceMode: 'text',
     textMateScope: 'source.cairo',
+    group: 'Cairo',
+  );
+
+  /// The information provided by linguist about
+  /// the "Cairo Zero" language or content type.
+  static const LanguageInfo cairoZero = LanguageInfo(
+    name: 'Cairo Zero',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.cairo'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ff4a48',
+    aceMode: 'text',
+    textMateScope: 'source.cairo0',
+    group: 'Cairo',
   );
 
   /// The information provided by linguist about
@@ -1494,6 +1579,22 @@ abstract final class Language {
     linguistColor: '#c42727',
     aceMode: 'text',
     textMateScope: 'source.capnp',
+  );
+
+  /// The information provided by linguist about
+  /// the "Carbon" language or content type.
+  static const LanguageInfo carbon = LanguageInfo(
+    name: 'Carbon',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.carbon'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#222222',
+    aceMode: 'golang',
+    codeMirrorMode: 'go',
+    codeMirrorMimeType: 'text/x-go',
+    textMateScope: 'source.v',
   );
 
   /// The information provided by linguist about
@@ -1891,7 +1992,7 @@ abstract final class Language {
     aceMode: 'lisp',
     codeMirrorMode: 'commonlisp',
     codeMirrorMimeType: 'text/x-common-lisp',
-    textMateScope: 'source.lisp',
+    textMateScope: 'source.commonlisp',
   );
 
   /// The information provided by linguist about
@@ -2111,6 +2212,21 @@ abstract final class Language {
     codeMirrorMode: 'javascript',
     codeMirrorMimeType: 'text/javascript',
     textMateScope: 'source.js',
+  );
+
+  /// The information provided by linguist about
+  /// the "Cylc" language or content type.
+  static const LanguageInfo cylc = LanguageInfo(
+    name: 'Cylc',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.cylc'],
+    filenames: ['suite.rc'],
+    interpreters: [],
+    linguistColor: '#00b3fd',
+    aceMode: 'ini',
+    textMateScope: 'source.cylc',
+    group: 'INI',
   );
 
   /// The information provided by linguist about
@@ -2396,7 +2512,10 @@ abstract final class Language {
     name: 'Dockerfile',
     type: LanguageType.programming,
     aliases: ['Containerfile'],
-    extensions: ['.dockerfile'],
+    extensions: [
+      '.dockerfile',
+      '.containerfile',
+    ],
     filenames: [
       'Containerfile',
       'Dockerfile',
@@ -2439,6 +2558,7 @@ abstract final class Language {
       '.env.local',
       '.env.prod',
       '.env.production',
+      '.env.sample',
       '.env.staging',
       '.env.test',
       '.env.testing',
@@ -2447,6 +2567,20 @@ abstract final class Language {
     linguistColor: '#e5d559',
     aceMode: 'text',
     textMateScope: 'source.dotenv',
+  );
+
+  /// The information provided by linguist about
+  /// the "Dune" language or content type.
+  static const LanguageInfo dune = LanguageInfo(
+    name: 'Dune',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: [],
+    filenames: ['dune-project'],
+    interpreters: [],
+    linguistColor: '#89421e',
+    aceMode: 'lisp',
+    textMateScope: 'source.dune',
   );
 
   /// The information provided by linguist about
@@ -2552,7 +2686,7 @@ abstract final class Language {
     linguistColor: '#001d9d',
     aceMode: 'prolog',
     textMateScope: 'source.prolog.eclipse',
-    group: 'prolog',
+    group: 'Prolog',
   );
 
   /// The information provided by linguist about
@@ -2671,6 +2805,37 @@ abstract final class Language {
     codeMirrorMimeType: 'text/html',
     textMateScope: 'text.html.ecmarkup',
     group: 'HTML',
+  );
+
+  /// The information provided by linguist about
+  /// the "Edge" language or content type.
+  static const LanguageInfo edge = LanguageInfo(
+    name: 'Edge',
+    type: LanguageType.markup,
+    aliases: [],
+    extensions: ['.edge'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#0dffe0',
+    aceMode: 'html',
+    textMateScope: 'text.html.edge',
+  );
+
+  /// The information provided by linguist about
+  /// the "EdgeQL" language or content type.
+  static const LanguageInfo edgeQL = LanguageInfo(
+    name: 'EdgeQL',
+    type: LanguageType.programming,
+    aliases: ['esdl'],
+    extensions: [
+      '.edgeql',
+      '.esdl',
+    ],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#31A7FF',
+    aceMode: 'text',
+    textMateScope: 'source.edgeql',
   );
 
   /// The information provided by linguist about
@@ -2939,6 +3104,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "FIRRTL" language or content type.
+  static const LanguageInfo firrtl = LanguageInfo(
+    name: 'FIRRTL',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.fir'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#2f632f',
+    aceMode: 'text',
+    textMateScope: 'source.firrtl',
+  );
+
+  /// The information provided by linguist about
   /// the "FLUX" language or content type.
   static const LanguageInfo flux = LanguageInfo(
     name: 'FLUX',
@@ -3157,9 +3336,9 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
-  /// the "FreeBasic" language or content type.
+  /// the "FreeBASIC" language or content type.
   static const LanguageInfo freeBasic = LanguageInfo(
-    name: 'FreeBasic',
+    name: 'FreeBASIC',
     type: LanguageType.programming,
     aliases: ['fb'],
     extensions: [
@@ -3463,9 +3642,9 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
-  /// the "Genero" language or content type.
-  static const LanguageInfo genero = LanguageInfo(
-    name: 'Genero',
+  /// the "Genero 4gl" language or content type.
+  static const LanguageInfo genero4gl = LanguageInfo(
+    name: 'Genero 4gl',
     type: LanguageType.programming,
     aliases: [],
     extensions: ['.4gl'],
@@ -3473,13 +3652,13 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#63408e',
     aceMode: 'text',
-    textMateScope: 'source.genero',
+    textMateScope: 'source.genero-4gl',
   );
 
   /// The information provided by linguist about
-  /// the "Genero Forms" language or content type.
-  static const LanguageInfo generoForms = LanguageInfo(
-    name: 'Genero Forms',
+  /// the "Genero per" language or content type.
+  static const LanguageInfo generoPer = LanguageInfo(
+    name: 'Genero per',
     type: LanguageType.markup,
     aliases: [],
     extensions: ['.per'],
@@ -3487,7 +3666,7 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#d8df39',
     aceMode: 'text',
-    textMateScope: 'source.genero-forms',
+    textMateScope: 'source.genero-per',
   );
 
   /// The information provided by linguist about
@@ -3637,7 +3816,6 @@ abstract final class Language {
     codeMirrorMode: 'shell',
     codeMirrorMimeType: 'text/x-sh',
     textMateScope: 'source.gitattributes',
-    group: 'INI',
   );
 
   /// The information provided by linguist about
@@ -3689,6 +3867,36 @@ abstract final class Language {
     linguistColor: '#ffaff3',
     aceMode: 'text',
     textMateScope: 'source.gleam',
+  );
+
+  /// The information provided by linguist about
+  /// the "Glimmer JS" language or content type.
+  static const LanguageInfo glimmerJS = LanguageInfo(
+    name: 'Glimmer JS',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.gjs'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#F5835F',
+    aceMode: 'javascript',
+    textMateScope: 'source.gjs',
+    group: 'JavaScript',
+  );
+
+  /// The information provided by linguist about
+  /// the "Glimmer TS" language or content type.
+  static const LanguageInfo glimmerTS = LanguageInfo(
+    name: 'Glimmer TS',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.gts'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#3178c6',
+    aceMode: 'typescript',
+    textMateScope: 'source.gts',
+    group: 'TypeScript',
   );
 
   /// The information provided by linguist about
@@ -4048,7 +4256,7 @@ abstract final class Language {
     aceMode: 'ruby',
     codeMirrorMode: 'ruby',
     codeMirrorMimeType: 'text/x-ruby',
-    textMateScope: 'source.terraform',
+    textMateScope: 'source.hcl',
   );
 
   /// The information provided by linguist about
@@ -4321,6 +4529,19 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Hare" language or content type.
+  static const LanguageInfo hare = LanguageInfo(
+    name: 'Hare',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.ha'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#9d7424',
+    aceMode: 'text',
+  );
+
+  /// The information provided by linguist about
   /// the "Haskell" language or content type.
   static const LanguageInfo haskell = LanguageInfo(
     name: 'Haskell',
@@ -4406,6 +4627,7 @@ abstract final class Language {
     filenames: [
       'HOSTS',
       'hosts',
+      'hosts.txt',
     ],
     interpreters: [],
     linguistColor: '#308888',
@@ -4493,6 +4715,7 @@ abstract final class Language {
       '.url',
     ],
     filenames: [
+      '.buckconfig',
       '.coveragerc',
       '.flake8',
       '.pylintrc',
@@ -4565,9 +4788,11 @@ abstract final class Language {
       '.coffeelintignore',
       '.cvsignore',
       '.dockerignore',
+      '.easignore',
       '.eleventyignore',
       '.eslintignore',
       '.gitignore',
+      '.ignore',
       '.markdownlintignore',
       '.nodemonignore',
       '.npmignore',
@@ -4584,7 +4809,6 @@ abstract final class Language {
     codeMirrorMode: 'shell',
     codeMirrorMimeType: 'text/x-sh',
     textMateScope: 'source.gitignore',
-    group: 'INI',
   );
 
   /// The information provided by linguist about
@@ -4788,6 +5012,7 @@ abstract final class Language {
     aliases: [
       'geojson',
       'jsonl',
+      'sarif',
       'topojson',
     ],
     extensions: [
@@ -4800,8 +5025,11 @@ abstract final class Language {
       '.har',
       '.ice',
       '.JSON-tmLanguage',
+      '.json.example',
       '.jsonl',
       '.mcmeta',
+      '.sarif',
+      '.tact',
       '.tfstate',
       '.tfstate.backup',
       '.topojson',
@@ -4821,8 +5049,10 @@ abstract final class Language {
       '.tern-config',
       '.tern-project',
       '.watchmanconfig',
+      'MODULE.bazel.lock',
       'Pipfile.lock',
       'composer.lock',
+      'deno.lock',
       'flake.lock',
       'mcmod.info',
     ],
@@ -4845,6 +5075,7 @@ abstract final class Language {
       '.code-snippets',
       '.code-workspace',
       '.sublime-build',
+      '.sublime-color-scheme',
       '.sublime-commands',
       '.sublime-completions',
       '.sublime-keymap',
@@ -4931,6 +5162,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Jai" language or content type.
+  static const LanguageInfo jai = LanguageInfo(
+    name: 'Jai',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.jai'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ab8b4b',
+    aceMode: 'text',
+    textMateScope: 'source.jai',
+  );
+
+  /// The information provided by linguist about
   /// the "Janet" language or content type.
   static const LanguageInfo janet = LanguageInfo(
     name: 'Janet',
@@ -5013,6 +5258,21 @@ abstract final class Language {
     codeMirrorMode: 'htmlembedded',
     codeMirrorMimeType: 'application/x-jsp',
     textMateScope: 'text.html.jsp',
+    group: 'Java',
+  );
+
+  /// The information provided by linguist about
+  /// the "Java Template Engine" language or content type.
+  static const LanguageInfo javaTemplateEngine = LanguageInfo(
+    name: 'Java Template Engine',
+    type: LanguageType.programming,
+    aliases: ['jte'],
+    extensions: ['.jte'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#2A6277',
+    aceMode: 'text',
+    textMateScope: 'text.html.jte',
     group: 'Java',
   );
 
@@ -5230,6 +5490,21 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Julia REPL" language or content type.
+  static const LanguageInfo juliaRepl = LanguageInfo(
+    name: 'Julia REPL',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: [],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#a270ba',
+    aceMode: 'text',
+    textMateScope: 'source.julia.console',
+    group: 'Julia',
+  );
+
+  /// The information provided by linguist about
   /// the "Jupyter Notebook" language or content type.
   static const LanguageInfo jupyterNotebook = LanguageInfo(
     name: 'Jupyter Notebook',
@@ -5251,8 +5526,11 @@ abstract final class Language {
     name: 'Just',
     type: LanguageType.programming,
     aliases: ['Justfile'],
-    extensions: [],
+    extensions: ['.just'],
     filenames: [
+      '.JUSTFILE',
+      '.Justfile',
+      '.justfile',
       'JUSTFILE',
       'Justfile',
       'justfile',
@@ -5261,6 +5539,22 @@ abstract final class Language {
     linguistColor: '#384d54',
     aceMode: 'text',
     textMateScope: 'source.just',
+  );
+
+  /// The information provided by linguist about
+  /// the "KDL" language or content type.
+  static const LanguageInfo kdl = LanguageInfo(
+    name: 'KDL',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.kdl'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ffb3b3',
+    aceMode: 'tcl',
+    codeMirrorMode: 'yacas',
+    codeMirrorMimeType: 'text/x-yacas',
+    textMateScope: 'source.kdl',
   );
 
   /// The information provided by linguist about
@@ -5602,6 +5896,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Lean 4" language or content type.
+  static const LanguageInfo lean4 = LanguageInfo(
+    name: 'Lean 4',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.lean'],
+    filenames: [],
+    interpreters: [],
+    aceMode: 'text',
+    textMateScope: 'source.lean4',
+    group: 'Lean',
+  );
+
+  /// The information provided by linguist about
   /// the "Less" language or content type.
   static const LanguageInfo less = LanguageInfo(
     name: 'Less',
@@ -5681,6 +5989,18 @@ abstract final class Language {
       '.b',
       '.m',
     ],
+    filenames: [],
+    interpreters: [],
+    aceMode: 'text',
+  );
+
+  /// The information provided by linguist about
+  /// the "Linear Programming" language or content type.
+  static const LanguageInfo linearProgramming = LanguageInfo(
+    name: 'Linear Programming',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.lp'],
     filenames: [],
     interpreters: [],
     aceMode: 'text',
@@ -5778,6 +6098,20 @@ abstract final class Language {
     codeMirrorMimeType: 'text/x-literate-haskell',
     textMateScope: 'text.tex.latex.haskell',
     group: 'Haskell',
+  );
+
+  /// The information provided by linguist about
+  /// the "LiveCode Script" language or content type.
+  static const LanguageInfo liveCodeScript = LanguageInfo(
+    name: 'LiveCode Script',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.livecodescript'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#0c5ba5',
+    aceMode: 'text',
+    textMateScope: 'source.livecodescript',
   );
 
   /// The information provided by linguist about
@@ -5891,6 +6225,22 @@ abstract final class Language {
     codeMirrorMode: 'lua',
     codeMirrorMimeType: 'text/x-lua',
     textMateScope: 'source.lua',
+  );
+
+  /// The information provided by linguist about
+  /// the "Luau" language or content type.
+  static const LanguageInfo luau = LanguageInfo(
+    name: 'Luau',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.luau'],
+    filenames: [],
+    interpreters: ['luau'],
+    linguistColor: '#00A2FF',
+    aceMode: 'lua',
+    codeMirrorMode: 'lua',
+    codeMirrorMimeType: 'text/x-lua',
+    textMateScope: 'source.luau',
   );
 
   /// The information provided by linguist about
@@ -6404,6 +6754,33 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "MiniZinc" language or content type.
+  static const LanguageInfo miniZinc = LanguageInfo(
+    name: 'MiniZinc',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.mzn'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#06a9e6',
+    aceMode: 'text',
+    textMateScope: 'source.mzn',
+  );
+
+  /// The information provided by linguist about
+  /// the "MiniZinc Data" language or content type.
+  static const LanguageInfo miniZincData = LanguageInfo(
+    name: 'MiniZinc Data',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.dzn'],
+    filenames: [],
+    interpreters: [],
+    aceMode: 'text',
+    textMateScope: 'source.mzn',
+  );
+
+  /// The information provided by linguist about
   /// the "Mint" language or content type.
   static const LanguageInfo mint = LanguageInfo(
     name: 'Mint',
@@ -6505,6 +6882,22 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Mojo" language or content type.
+  static const LanguageInfo mojo = LanguageInfo(
+    name: 'Mojo',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.mojo'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ff4c1f',
+    aceMode: 'python',
+    codeMirrorMode: 'python',
+    codeMirrorMimeType: 'text/x-python',
+    textMateScope: 'source.mojo',
+  );
+
+  /// The information provided by linguist about
   /// the "Monkey" language or content type.
   static const LanguageInfo monkey = LanguageInfo(
     name: 'Monkey',
@@ -6546,6 +6939,20 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     aceMode: 'text',
+  );
+
+  /// The information provided by linguist about
+  /// the "MoonBit" language or content type.
+  static const LanguageInfo moonBit = LanguageInfo(
+    name: 'MoonBit',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.mbt'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#b92381',
+    aceMode: 'text',
+    textMateScope: 'source.moonbit',
   );
 
   /// The information provided by linguist about
@@ -6714,6 +7121,19 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "NMODL" language or content type.
+  static const LanguageInfo nmodl = LanguageInfo(
+    name: 'NMODL',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.mod'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#00356B',
+    aceMode: 'text',
+  );
+
+  /// The information provided by linguist about
   /// the "NPM Config" language or content type.
   static const LanguageInfo npmConfig = LanguageInfo(
     name: 'NPM Config',
@@ -6772,7 +7192,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#1d2c4e',
-    aceMode: 'text',
+    aceMode: 'nasal',
     textMateScope: 'source.nasal',
   );
 
@@ -6973,6 +7393,22 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Noir" language or content type.
+  static const LanguageInfo noir = LanguageInfo(
+    name: 'Noir',
+    type: LanguageType.programming,
+    aliases: ['nargo'],
+    extensions: ['.nr'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#2f1f49',
+    aceMode: 'rust',
+    codeMirrorMode: 'rust',
+    codeMirrorMimeType: 'text/x-rustsrc',
+    textMateScope: 'source.nr',
+  );
+
+  /// The information provided by linguist about
   /// the "Nu" language or content type.
   static const LanguageInfo nu = LanguageInfo(
     name: 'Nu',
@@ -7141,6 +7577,47 @@ abstract final class Language {
     codeMirrorMode: 'mllike',
     codeMirrorMimeType: 'text/x-ocaml',
     textMateScope: 'source.ocaml',
+  );
+
+  /// The information provided by linguist about
+  /// the "OMNeT++ MSG" language or content type.
+  static const LanguageInfo omneTPlusPlusMsg = LanguageInfo(
+    name: 'OMNeT++ MSG',
+    type: LanguageType.programming,
+    aliases: ['omnetpp-msg'],
+    extensions: ['.msg'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#a0e0a0',
+    aceMode: 'text',
+    textMateScope: 'source.msg',
+  );
+
+  /// The information provided by linguist about
+  /// the "OMNeT++ NED" language or content type.
+  static const LanguageInfo omneTPlusPlusNed = LanguageInfo(
+    name: 'OMNeT++ NED',
+    type: LanguageType.programming,
+    aliases: ['omnetpp-ned'],
+    extensions: ['.ned'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#08607c',
+    aceMode: 'text',
+    textMateScope: 'source.ned',
+  );
+
+  /// The information provided by linguist about
+  /// the "Oberon" language or content type.
+  static const LanguageInfo oberon = LanguageInfo(
+    name: 'Oberon',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.ob2'],
+    filenames: [],
+    interpreters: [],
+    aceMode: 'text',
+    textMateScope: 'source.modula2',
   );
 
   /// The information provided by linguist about
@@ -7498,6 +7975,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "OverpassQL" language or content type.
+  static const LanguageInfo overpassQL = LanguageInfo(
+    name: 'OverpassQL',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.overpassql'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#cce2aa',
+    aceMode: 'text',
+    textMateScope: 'source.overpassql',
+  );
+
+  /// The information provided by linguist about
   /// the "Ox" language or content type.
   static const LanguageInfo ox = LanguageInfo(
     name: 'Ox',
@@ -7577,14 +8068,17 @@ abstract final class Language {
     name: 'PEG.js',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.pegjs'],
+    extensions: [
+      '.pegjs',
+      '.peggy',
+    ],
     filenames: [],
     interpreters: [],
     linguistColor: '#234d6b',
     aceMode: 'javascript',
     codeMirrorMode: 'javascript',
     codeMirrorMimeType: 'text/javascript',
-    textMateScope: 'source.pegjs',
+    textMateScope: 'source.peggy',
   );
 
   /// The information provided by linguist about
@@ -7948,6 +8442,37 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Pip Requirements" language or content type.
+  static const LanguageInfo pipRequirements = LanguageInfo(
+    name: 'Pip Requirements',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: [],
+    filenames: [
+      'requirements-dev.txt',
+      'requirements.txt',
+    ],
+    interpreters: [],
+    linguistColor: '#FFD343',
+    aceMode: 'text',
+    textMateScope: 'source.pip-requirements',
+  );
+
+  /// The information provided by linguist about
+  /// the "Pkl" language or content type.
+  static const LanguageInfo pkl = LanguageInfo(
+    name: 'Pkl',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.pkl'],
+    filenames: [],
+    interpreters: ['pkl'],
+    linguistColor: '#6b9543',
+    aceMode: 'text',
+    textMateScope: 'source.pkl',
+  );
+
+  /// The information provided by linguist about
   /// the "PlantUML" language or content type.
   static const LanguageInfo plantUml = LanguageInfo(
     name: 'PlantUML',
@@ -8103,6 +8628,7 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#8f0f8d',
     aceMode: 'text',
+    textMateScope: 'source.powerbuilder',
   );
 
   /// The information provided by linguist about
@@ -8126,6 +8652,20 @@ abstract final class Language {
     codeMirrorMode: 'powershell',
     codeMirrorMimeType: 'application/x-powershell',
     textMateScope: 'source.powershell',
+  );
+
+  /// The information provided by linguist about
+  /// the "Praat" language or content type.
+  static const LanguageInfo praat = LanguageInfo(
+    name: 'Praat',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.praat'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#c8506d',
+    aceMode: 'praat',
+    textMateScope: 'source.praat',
   );
 
   /// The information provided by linguist about
@@ -8546,12 +9086,33 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "QuickBASIC" language or content type.
+  static const LanguageInfo quickBasic = LanguageInfo(
+    name: 'QuickBASIC',
+    type: LanguageType.programming,
+    aliases: [
+      'qb',
+      'qbasic',
+      'qb64',
+      'classic qbasic',
+      'classic quickbasic',
+    ],
+    extensions: ['.bas'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#008080',
+    aceMode: 'text',
+    codeMirrorMode: 'vb',
+    codeMirrorMimeType: 'text/x-vb',
+    textMateScope: 'source.QB64',
+  );
+
+  /// The information provided by linguist about
   /// the "R" language or content type.
   static const LanguageInfo r = LanguageInfo(
     name: 'R',
     type: LanguageType.programming,
     aliases: [
-      'R',
       'Rscript',
       'splus',
     ],
@@ -8677,6 +9238,20 @@ abstract final class Language {
     codeMirrorMode: 'gfm',
     codeMirrorMimeType: 'text/x-gfm',
     textMateScope: 'text.md',
+  );
+
+  /// The information provided by linguist about
+  /// the "RON" language or content type.
+  static const LanguageInfo ron = LanguageInfo(
+    name: 'RON',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.ron'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#a62c00',
+    aceMode: 'rust',
+    textMateScope: 'source.ron',
   );
 
   /// The information provided by linguist about
@@ -9106,12 +9681,29 @@ abstract final class Language {
     name: 'RobotFramework',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.robot'],
+    extensions: [
+      '.robot',
+      '.resource',
+    ],
     filenames: [],
     interpreters: [],
     linguistColor: '#00c0b5',
     aceMode: 'text',
     textMateScope: 'text.robot',
+  );
+
+  /// The information provided by linguist about
+  /// the "Roc" language or content type.
+  static const LanguageInfo roc = LanguageInfo(
+    name: 'Roc',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.roc'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#7c38f5',
+    aceMode: 'text',
+    textMateScope: 'source.roc',
   );
 
   /// The information provided by linguist about
@@ -9518,7 +10110,12 @@ abstract final class Language {
   static const LanguageInfo sshConfig = LanguageInfo(
     name: 'SSH Config',
     type: LanguageType.data,
-    aliases: [],
+    aliases: [
+      'sshconfig',
+      'sshdconfig',
+      'ssh_config',
+      'sshd_config',
+    ],
     extensions: [],
     filenames: [
       'ssh-config',
@@ -9797,6 +10394,7 @@ abstract final class Language {
       'shell-script',
       'bash',
       'zsh',
+      'envrc',
     ],
     extensions: [
       '.sh',
@@ -9821,10 +10419,12 @@ abstract final class Language {
       '.bash_profile',
       '.bashrc',
       '.cshrc',
+      '.envrc',
       '.flaskenv',
       '.kshrc',
       '.login',
       '.profile',
+      '.tmux.conf',
       '.zlogin',
       '.zlogout',
       '.zprofile',
@@ -9842,6 +10442,7 @@ abstract final class Language {
       'login',
       'man',
       'profile',
+      'tmux.conf',
       'zlogin',
       'zlogout',
       'zprofile',
@@ -9985,7 +10586,7 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#003fa2',
     aceMode: 'text',
-    textMateScope: 'source.slice',
+    textMateScope: 'source.ice',
   );
 
   /// The information provided by linguist about
@@ -10002,6 +10603,20 @@ abstract final class Language {
     codeMirrorMode: 'slim',
     codeMirrorMimeType: 'text/x-slim',
     textMateScope: 'text.slim',
+  );
+
+  /// The information provided by linguist about
+  /// the "Slint" language or content type.
+  static const LanguageInfo slint = LanguageInfo(
+    name: 'Slint',
+    type: LanguageType.markup,
+    aliases: [],
+    extensions: ['.slint'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#2379F4',
+    aceMode: 'text',
+    textMateScope: 'source.slint',
   );
 
   /// The information provided by linguist about
@@ -10231,6 +10846,7 @@ abstract final class Language {
       'Tiltfile',
       'WORKSPACE',
       'WORKSPACE.bazel',
+      'WORKSPACE.bzlmod',
     ],
     interpreters: [],
     linguistColor: '#76d275',
@@ -10341,6 +10957,19 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Survex data" language or content type.
+  static const LanguageInfo survexData = LanguageInfo(
+    name: 'Survex data',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.svx'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ffcc99',
+    aceMode: 'text',
+  );
+
+  /// The information provided by linguist about
   /// the "Svelte" language or content type.
   static const LanguageInfo svelte = LanguageInfo(
     name: 'Svelte',
@@ -10365,7 +10994,7 @@ abstract final class Language {
     extensions: ['.sw'],
     filenames: [],
     interpreters: [],
-    linguistColor: '#dea584',
+    linguistColor: '#00F58C',
     aceMode: 'rust',
     codeMirrorMode: 'rust',
     codeMirrorMimeType: 'text/x-rustsrc',
@@ -10430,14 +11059,13 @@ abstract final class Language {
     aliases: [],
     extensions: [
       '.8xp',
-      '.8xk',
-      '.8xk.txt',
       '.8xp.txt',
     ],
     filenames: [],
     interpreters: [],
     linguistColor: '#A0AA87',
     aceMode: 'text',
+    textMateScope: 'source.8xp',
   );
 
   /// The information provided by linguist about
@@ -10477,10 +11105,12 @@ abstract final class Language {
     extensions: ['.toml'],
     filenames: [
       'Cargo.lock',
+      'Cargo.toml.orig',
       'Gopkg.lock',
       'Pipfile',
       'pdm.lock',
       'poetry.lock',
+      'uv.lock',
     ],
     interpreters: [],
     linguistColor: '#9c4221',
@@ -10488,6 +11118,21 @@ abstract final class Language {
     codeMirrorMode: 'toml',
     codeMirrorMimeType: 'text/x-toml',
     textMateScope: 'source.toml',
+  );
+
+  /// The information provided by linguist about
+  /// the "TSPLIB data" language or content type.
+  static const LanguageInfo tsplibData = LanguageInfo(
+    name: 'TSPLIB data',
+    type: LanguageType.data,
+    aliases: [
+      'travelling salesman problem',
+      'traveling salesman problem',
+    ],
+    extensions: ['.tsp'],
+    filenames: [],
+    interpreters: [],
+    aceMode: 'text',
   );
 
   /// The information provided by linguist about
@@ -10509,8 +11154,11 @@ abstract final class Language {
   static const LanguageInfo tsv = LanguageInfo(
     name: 'TSV',
     type: LanguageType.data,
-    aliases: [],
-    extensions: ['.tsv'],
+    aliases: ['tab-seperated values'],
+    extensions: [
+      '.tsv',
+      '.vcf',
+    ],
     filenames: [],
     interpreters: [],
     linguistColor: '#237346',
@@ -10547,6 +11195,20 @@ abstract final class Language {
     linguistColor: '#0178b8',
     aceMode: 'text',
     textMateScope: 'source.txl',
+  );
+
+  /// The information provided by linguist about
+  /// the "Tact" language or content type.
+  static const LanguageInfo tact = LanguageInfo(
+    name: 'Tact',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.tact'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#48b5ff',
+    aceMode: 'text',
+    textMateScope: 'source.tact',
   );
 
   /// The information provided by linguist about
@@ -10678,6 +11340,23 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Terraform Template" language or content type.
+  static const LanguageInfo terraformTemplate = LanguageInfo(
+    name: 'Terraform Template',
+    type: LanguageType.markup,
+    aliases: [],
+    extensions: ['.tftpl'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#7b42bb',
+    aceMode: 'ruby',
+    codeMirrorMode: 'ruby',
+    codeMirrorMimeType: 'text/x-ruby',
+    textMateScope: 'source.hcl.terraform',
+    group: 'HCL',
+  );
+
+  /// The information provided by linguist about
   /// the "Texinfo" language or content type.
   static const LanguageInfo texinfo = LanguageInfo(
     name: 'Texinfo',
@@ -10742,6 +11421,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "TextGrid" language or content type.
+  static const LanguageInfo textGrid = LanguageInfo(
+    name: 'TextGrid',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.TextGrid'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#c8506d',
+    aceMode: 'text',
+    textMateScope: 'source.textgrid',
+  );
+
+  /// The information provided by linguist about
   /// the "TextMate Properties" language or content type.
   static const LanguageInfo textMateProperties = LanguageInfo(
     name: 'TextMate Properties',
@@ -10784,6 +11477,20 @@ abstract final class Language {
     linguistColor: '#D12127',
     aceMode: 'text',
     textMateScope: 'source.thrift',
+  );
+
+  /// The information provided by linguist about
+  /// the "Toit" language or content type.
+  static const LanguageInfo toit = LanguageInfo(
+    name: 'Toit',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.toit'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#c2c9fb',
+    aceMode: 'text',
+    textMateScope: 'source.toit',
   );
 
   /// The information provided by linguist about
@@ -10862,12 +11569,27 @@ abstract final class Language {
     interpreters: [
       'deno',
       'ts-node',
+      'tsx',
     ],
     linguistColor: '#3178c6',
     aceMode: 'typescript',
     codeMirrorMode: 'javascript',
     codeMirrorMimeType: 'application/typescript',
     textMateScope: 'source.ts',
+  );
+
+  /// The information provided by linguist about
+  /// the "TypeSpec" language or content type.
+  static const LanguageInfo typeSpec = LanguageInfo(
+    name: 'TypeSpec',
+    type: LanguageType.programming,
+    aliases: ['tsp'],
+    extensions: ['.tsp'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#4A3665',
+    aceMode: 'text',
+    textMateScope: 'source.tsp',
   );
 
   /// The information provided by linguist about
@@ -11188,6 +11910,7 @@ abstract final class Language {
       'vim',
       'viml',
       'nvim',
+      'vimscript',
     ],
     extensions: [
       '.vim',
@@ -11283,7 +12006,7 @@ abstract final class Language {
     aceMode: 'text',
     codeMirrorMode: 'vb',
     codeMirrorMimeType: 'text/x-vb',
-    textMateScope: 'source.vbnet',
+    textMateScope: 'source.vba',
   );
 
   /// The information provided by linguist about
@@ -11313,7 +12036,7 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#41b883',
     aceMode: 'html',
-    textMateScope: 'text.html.vue',
+    textMateScope: 'source.vue',
   );
 
   /// The information provided by linguist about
@@ -11739,6 +12462,7 @@ abstract final class Language {
       '.glade',
       '.gml',
       '.gmx',
+      '.gpx',
       '.grxml',
       '.gst',
       '.hzp',
@@ -11752,6 +12476,7 @@ abstract final class Language {
       '.mjml',
       '.mm',
       '.mod',
+      '.mojo',
       '.mxml',
       '.natvis',
       '.ncl',
@@ -11955,6 +12680,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Xmake" language or content type.
+  static const LanguageInfo xmake = LanguageInfo(
+    name: 'Xmake',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: [],
+    filenames: ['xmake.lua'],
+    interpreters: [],
+    linguistColor: '#22a079',
+    aceMode: 'text',
+    textMateScope: 'source.xmake',
+  );
+
+  /// The information provided by linguist about
   /// the "Xojo" language or content type.
   static const LanguageInfo xojo = LanguageInfo(
     name: 'Xojo',
@@ -12026,9 +12765,11 @@ abstract final class Language {
     filenames: [
       '.clang-format',
       '.clang-tidy',
+      '.clangd',
       '.gemrc',
       'CITATION.cff',
       'glide.lock',
+      'pixi.lock',
       'yarn.lock',
     ],
     interpreters: [],
@@ -12202,7 +12943,10 @@ abstract final class Language {
     name: 'Zig',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.zig'],
+    extensions: [
+      '.zig',
+      '.zig.zon',
+    ],
     filenames: [],
     interpreters: [],
     linguistColor: '#ec915c',
@@ -12242,6 +12986,23 @@ abstract final class Language {
     aceMode: 'text',
     textMateScope: 'source.curlrc',
     group: 'INI',
+  );
+
+  /// The information provided by linguist about
+  /// the "crontab" language or content type.
+  static const LanguageInfo crontab = LanguageInfo(
+    name: 'crontab',
+    type: LanguageType.data,
+    aliases: [
+      'cron',
+      'cron table',
+    ],
+    extensions: [],
+    filenames: ['crontab'],
+    interpreters: [],
+    linguistColor: '#ead7ac',
+    aceMode: 'tcl',
+    textMateScope: 'text.crontab',
   );
 
   /// The information provided by linguist about
@@ -12343,6 +13104,25 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "iCalendar" language or content type.
+  static const LanguageInfo iCalendar = LanguageInfo(
+    name: 'iCalendar',
+    type: LanguageType.data,
+    aliases: ['iCal'],
+    extensions: [
+      '.ics',
+      '.ical',
+    ],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ec564c',
+    aceMode: 'properties',
+    codeMirrorMode: 'properties',
+    codeMirrorMimeType: 'text/x-properties',
+    textMateScope: 'source.iCalendar',
+  );
+
+  /// The information provided by linguist about
   /// the "jq" language or content type.
   static const LanguageInfo jq = LanguageInfo(
     name: 'jq',
@@ -12350,7 +13130,14 @@ abstract final class Language {
     aliases: [],
     extensions: ['.jq'],
     filenames: [],
-    interpreters: [],
+    interpreters: [
+      'gojq',
+      'jaq',
+      'jq',
+      'jqjq',
+      'jqq',
+      'query-json',
+    ],
     linguistColor: '#c7254e',
     aceMode: 'text',
     textMateScope: 'source.jq',
@@ -12396,6 +13183,21 @@ abstract final class Language {
     linguistColor: '#E22837',
     aceMode: 'text',
     textMateScope: 'source.mcfunction',
+  );
+
+  /// The information provided by linguist about
+  /// the "mdsvex" language or content type.
+  static const LanguageInfo mdsvex = LanguageInfo(
+    name: 'mdsvex',
+    type: LanguageType.markup,
+    aliases: [],
+    extensions: ['.svx'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#5f9ea0',
+    aceMode: 'markdown',
+    codeMirrorMode: 'gfm',
+    codeMirrorMimeType: 'text/x-gfm',
   );
 
   /// The information provided by linguist about
@@ -12526,6 +13328,39 @@ abstract final class Language {
     linguistColor: '#64b970',
     aceMode: 'text',
     textMateScope: 'source.sed',
+  );
+
+  /// The information provided by linguist about
+  /// the "templ" language or content type.
+  static const LanguageInfo templ = LanguageInfo(
+    name: 'templ',
+    type: LanguageType.markup,
+    aliases: [],
+    extensions: ['.templ'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#66D0DD',
+    aceMode: 'text',
+    textMateScope: 'source.templ',
+  );
+
+  /// The information provided by linguist about
+  /// the "vCard" language or content type.
+  static const LanguageInfo vCard = LanguageInfo(
+    name: 'vCard',
+    type: LanguageType.data,
+    aliases: [
+      'virtual contact file',
+      'electronic business card',
+    ],
+    extensions: ['.vcf'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ee2647',
+    aceMode: 'properties',
+    codeMirrorMode: 'properties',
+    codeMirrorMimeType: 'text/x-properties',
+    textMateScope: 'source.vcard',
   );
 
   /// The information provided by linguist about
