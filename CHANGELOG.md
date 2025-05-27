@@ -1,4 +1,4 @@
-## 0.1.1-wip
+## 0.2.0
 
 - Require Dart 3.8 or later.
 - Update linguist and regenerate index and data.
