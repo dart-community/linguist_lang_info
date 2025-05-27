@@ -13,8 +13,12 @@ void main() {
 
       final originalContents = serializationFile.readAsStringSync();
 
-      final buildResult = Process.runSync(Platform.resolvedExecutable,
-          ['run', 'build_runner', 'build', '--delete-conflicting-outputs']);
+      final buildResult = Process.runSync(Platform.resolvedExecutable, [
+        'run',
+        'build_runner',
+        'build',
+        '--delete-conflicting-outputs',
+      ]);
       expect(buildResult.exitCode, 0);
 
       expect(serializationFile.existsSync(), isTrue);
@@ -36,8 +40,10 @@ void main() {
         originalContents.add(file.readAsStringSync());
       }
 
-      final generateResult = Process.runSync(Platform.resolvedExecutable,
-          ['run', path.join('tool', 'generate.dart')]);
+      final generateResult = Process.runSync(Platform.resolvedExecutable, [
+        'run',
+        path.join('tool', 'generate.dart'),
+      ]);
       expect(generateResult.exitCode, 0);
 
       for (var i = 0; i < generatedFiles.length; i++) {
@@ -51,13 +57,15 @@ void main() {
     test('All language entries were generated', () {
       const generatedAllLanguages = allLanguages;
 
-      final linguistFile = File(path.join(
-        'third_party',
-        'linguist',
-        'lib',
-        'linguist',
-        'languages.yml',
-      ));
+      final linguistFile = File(
+        path.join(
+          'third_party',
+          'linguist',
+          'lib',
+          'linguist',
+          'languages.yml',
+        ),
+      );
 
       final loadedLinguistData =
           loadYaml(linguistFile.readAsStringSync()) as Map<dynamic, dynamic>;

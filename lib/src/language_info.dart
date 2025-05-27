@@ -126,10 +126,10 @@ enum LanguageType {
   /// Convert from the string representation of a [LanguageType] to
   /// the corresponding instance, or `null` if none match.
   static LanguageType? fromString(final String value) => switch (value) {
-        'data' => LanguageType.data,
-        'programming' => LanguageType.programming,
-        'markup' => LanguageType.markup,
-        'prose' => LanguageType.prose,
-        _ => null
-      };
+    'data' => LanguageType.data,
+    'programming' => LanguageType.programming,
+    'markup' => LanguageType.markup,
+    'prose' => LanguageType.prose,
+    _ => null,
+  };
 }

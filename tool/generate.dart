@@ -17,10 +17,7 @@ part 'generate.g.dart';
 void main() {
   final sourceFile = File(_linguistSourcePath);
   if (!sourceFile.existsSync()) {
-    throw FileSystemException(
-      'Data file does not exist.',
-      sourceFile.path,
-    );
+    throw FileSystemException('Data file does not exist.', sourceFile.path);
   }
 
   final sourceContent = sourceFile.readAsStringSync();
@@ -64,83 +61,86 @@ void main() {
 /// - A singular dot/period (`.`), such as in .NET, is converted to 'Dot'.
 /// - A singular star (`*`), such as in F*, is converted to 'Star'.''');
 
-    for (final MapEntry(
-          key: languageName,
-          value: languageInfo,
-        ) in languageEntries.entries) {
+    for (final MapEntry(key: languageName, value: languageInfo)
+        in languageEntries.entries) {
       final publicIdentifier = _toPublicIdentifier(languageName);
       allLanguageReferences.add(
         refer('Language', 'linguist_data.dart').property(publicIdentifier),
       );
 
-      classBuilder.fields.add(Field(
-        (fieldBuilder) => fieldBuilder
-          ..static = true
-          ..modifier = FieldModifier.constant
-          ..type = refer('LanguageInfo')
-          ..name = publicIdentifier
-          ..assignment = InvokeExpression.constOf(
-            refer('LanguageInfo'),
-            const [],
-            {
-              'name': literalString(languageName),
-              'type': refer('LanguageType.${languageInfo.type}'),
-              'aliases': literalConstList(languageInfo.aliases),
-              'extensions': literalConstList(languageInfo.extensions),
-              'filenames': literalConstList(languageInfo.filenames),
-              'interpreters': literalConstList(languageInfo.interpreters),
-              if (languageInfo.linguistColor case final color?)
-                'linguistColor': literalString(color),
-              if (languageInfo.backupFileSystemName
-                  case final backupFileSystemName?)
-                'backupFileSystemName': literalString(backupFileSystemName),
-              if (languageInfo.aceMode case final aceMode?)
-                'aceMode': literalString(aceMode),
-              if (languageInfo.codeMirrorMode case final codeMirrorMode?)
-                'codeMirrorMode': literalString(codeMirrorMode),
-              if (languageInfo.codeMirrorMimeType
-                  case final codeMirrorMimeType?)
-                'codeMirrorMimeType': literalString(codeMirrorMimeType),
-              if (languageInfo.textMateScope case final textMateScope?)
-                'textMateScope': literalString(textMateScope),
-              if (languageInfo.group case final group?)
-                'group': literalString(group),
-            },
-          ).code
-          ..docs.add('''
+      classBuilder.fields.add(
+        Field(
+          (fieldBuilder) => fieldBuilder
+            ..static = true
+            ..modifier = FieldModifier.constant
+            ..type = refer('LanguageInfo')
+            ..name = publicIdentifier
+            ..assignment =
+                InvokeExpression.constOf(refer('LanguageInfo'), const [], {
+                  'name': literalString(languageName),
+                  'type': refer('LanguageType.${languageInfo.type}'),
+                  'aliases': literalConstList(languageInfo.aliases),
+                  'extensions': literalConstList(languageInfo.extensions),
+                  'filenames': literalConstList(languageInfo.filenames),
+                  'interpreters': literalConstList(languageInfo.interpreters),
+                  if (languageInfo.linguistColor case final color?)
+                    'linguistColor': literalString(color),
+                  if (languageInfo.backupFileSystemName
+                      case final backupFileSystemName?)
+                    'backupFileSystemName': literalString(backupFileSystemName),
+                  if (languageInfo.aceMode case final aceMode?)
+                    'aceMode': literalString(aceMode),
+                  if (languageInfo.codeMirrorMode case final codeMirrorMode?)
+                    'codeMirrorMode': literalString(codeMirrorMode),
+                  if (languageInfo.codeMirrorMimeType
+                      case final codeMirrorMimeType?)
+                    'codeMirrorMimeType': literalString(codeMirrorMimeType),
+                  if (languageInfo.textMateScope case final textMateScope?)
+                    'textMateScope': literalString(textMateScope),
+                  if (languageInfo.group case final group?)
+                    'group': literalString(group),
+                }).code
+            ..docs.add('''
 /// The information provided by linguist about
 /// the "$languageName" language or content type.'''),
-      ));
+        ),
+      );
     }
   });
 
   // Create the library that contains the class and static definitions.
-  final dataLibrary = Library((libraryBuilder) => libraryBuilder
-    ..comments.add(_generatedLibraryComment)
-    ..directives.add(Directive.import('language_info.dart'))
-    ..body.add(languagesClass));
+  final dataLibrary = Library(
+    (libraryBuilder) => libraryBuilder
+      ..comments.add(_generatedLibraryComment)
+      ..directives.add(Directive.import('language_info.dart'))
+      ..body.add(languagesClass),
+  );
 
   // Create the library that includes a list with a reference
   // to all of the defined language information.
-  final indexLibrary = Library((libraryBuilder) => libraryBuilder
-    ..comments.add(_generatedLibraryComment)
-    ..directives.add(Directive.import('package:meta/meta.dart'))
-    ..directives.add(Directive.import('language_info.dart'))
-    ..directives.add(Directive.import('linguist_data.dart'))
-    ..body.add(Field(
-      (fieldBuilder) => fieldBuilder
-        ..annotations.add(refer('useResult', 'package:meta/meta.dart'))
-        ..name = 'allLanguages'
-        ..modifier = FieldModifier.constant
-        ..type = TypeReference((typeBuilder) => typeBuilder
-          ..symbol = 'Iterable'
-          ..url = 'dart:core'
-          ..types.add(refer('LanguageInfo', 'language_info.dart')))
-        ..assignment = literalList(
-          allLanguageReferences,
-          refer('LanguageInfo', 'language_info.dart'),
-        ).code
-        ..docs.add(r'''
+  final indexLibrary = Library(
+    (libraryBuilder) => libraryBuilder
+      ..comments.add(_generatedLibraryComment)
+      ..directives.add(Directive.import('package:meta/meta.dart'))
+      ..directives.add(Directive.import('language_info.dart'))
+      ..directives.add(Directive.import('linguist_data.dart'))
+      ..body.add(
+        Field(
+          (fieldBuilder) => fieldBuilder
+            ..annotations.add(refer('useResult', 'package:meta/meta.dart'))
+            ..name = 'allLanguages'
+            ..modifier = FieldModifier.constant
+            ..type = TypeReference(
+              (typeBuilder) => typeBuilder
+                ..symbol = 'Iterable'
+                ..url = 'dart:core'
+                ..types.add(refer('LanguageInfo', 'language_info.dart')),
+            )
+            ..assignment = literalList(
+              allLanguageReferences,
+              refer('LanguageInfo', 'language_info.dart'),
+            ).code
+            ..docs.add(r'''
 /// A collection of all languages and content types specified by linguist
 /// with the corresponding provided information.
 ///
@@ -149,18 +149,23 @@ void main() {
 ///
 /// **Warning:** Accessing this list can greatly increase code size,
 /// as it includes references to all included languages.'''),
-    )));
+        ),
+      ),
+  );
 
   final sourceEmitter = DartEmitter(
     orderDirectives: true,
     useNullSafetySyntax: true,
   );
 
-  final formatter = DartFormatter();
+  final formatter = DartFormatter(
+    languageVersion: DartFormatter.latestLanguageVersion,
+  );
 
   void outputLibrary(final Library library, final String targetPath) {
-    final formattedOutput =
-        formatter.format('${library.accept(sourceEmitter)}');
+    final formattedOutput = formatter.format(
+      '${library.accept(sourceEmitter)}',
+    );
 
     final outputFile = File(targetPath);
 
@@ -237,42 +242,42 @@ String _toPublicIdentifier(final String originalName) {
 
   // Special case for specific SQL languages with a
   // prepended capitalized character, such as `TSQL`.
-  identifier = identifier.replaceFirstMapped(
-    RegExp(r'^([A-Z])(SQL)$'),
-    (match) {
-      return '${match.group(1)!}_${match.group(2)!}';
-    },
-  );
+  identifier = identifier.replaceFirstMapped(RegExp(r'^([A-Z])(SQL)$'), (
+    match,
+  ) {
+    return '${match.group(1)!}_${match.group(2)!}';
+  });
 
   // Special case for words that are prepended with a capital `X`,
   // such as `XQuery`.
-  identifier = identifier.replaceFirstMapped(
-    RegExp(r'(^X)([A-Z][a-z])'),
-    (match) {
-      return '${match.group(1)!}_${match.group(2)!}';
-    },
-  );
+  identifier = identifier.replaceFirstMapped(RegExp(r'(^X)([A-Z][a-z])'), (
+    match,
+  ) {
+    return '${match.group(1)!}_${match.group(2)!}';
+  });
 
   // Special case for words that start with a single capital letter and
   // continue with `Make`, such as `CMake`.
-  identifier = identifier.replaceFirstMapped(
-    RegExp(r'(^[A-Z])(Make)'),
-    (match) {
-      return '${match.group(1)!}_${match.group(2)!}';
-    },
-  );
+  identifier = identifier.replaceFirstMapped(RegExp(r'(^[A-Z])(Make)'), (
+    match,
+  ) {
+    return '${match.group(1)!}_${match.group(2)!}';
+  });
 
   // Split digits and lowercase letters followed by a capital letter,
   // essentially treating the capital letter as starting a new word.
-  identifier =
-      identifier.replaceAllMapped(RegExp(r'([\da-z])([A-Z])'), (match) {
+  identifier = identifier.replaceAllMapped(RegExp(r'([\da-z])([A-Z])'), (
+    match,
+  ) {
     return '${match.group(1)!}_${match.group(2)!}';
   });
 
   // Special case to remove the dash (`-`) from instances of e-mail
   // to avoid getting `eMail`.
   identifier = identifier.replaceAll(
-      RegExp(r'\b[eE]-?mail\b', caseSensitive: false), 'Email');
+    RegExp(r'\b[eE]-?mail\b', caseSensitive: false),
+    'Email',
+  );
 
   // Special case to separate a capitalized letter followed by a
   // version identifier, such as `v3`.
@@ -295,16 +300,18 @@ String _toPublicIdentifier(final String originalName) {
   // Convert the first piece to lower case no matter what.
   firstPiece = firstPiece.toLowerCase();
 
-  remainingPieces = remainingPieces.map((p) {
-    // If a piece is an all upper-case acronym of one or two characters,
-    // it can continue to be capitalized.
-    if (p.length < 3 && p.toUpperCase() == p) {
-      return p;
-    }
+  remainingPieces = remainingPieces
+      .map((p) {
+        // If a piece is an all upper-case acronym of one or two characters,
+        // it can continue to be capitalized.
+        if (p.length < 3 && p.toUpperCase() == p) {
+          return p;
+        }
 
-    // Otherwise, only the first character of the piece should be capitalized.
-    return p.substring(0, 1).toUpperCase() + p.substring(1).toLowerCase();
-  }).toList(growable: false);
+        // Otherwise, only the first character of the piece should be capitalized.
+        return p.substring(0, 1).toUpperCase() + p.substring(1).toLowerCase();
+      })
+      .toList(growable: false);
 
   // Recombine each piece into a single string.
   identifier = [firstPiece, ...remainingPieces].join('');

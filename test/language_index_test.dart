@@ -18,7 +18,7 @@ void main() {
           Language.yaml,
           Language.swift,
           Language.typeScript,
-          Language.json
+          Language.json,
         ]),
       );
     });
