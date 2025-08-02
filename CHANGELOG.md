@@ -1,4 +1,4 @@
-## 0.2.1-wip
+## 0.2.1
 
 - Update linguist to `main` branch, and regenerate index and data.
 
