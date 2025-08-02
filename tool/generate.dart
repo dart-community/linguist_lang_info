@@ -28,7 +28,7 @@ void main() {
     (parsed) => parsed!.map(
       (key, value) => MapEntry(
         key as String,
-        LinguistLanguageEntry.fromJson(value as Map<dynamic, dynamic>),
+        LinguistLanguageEntry.fromJson(value as Map<Object?, Object?>),
       ),
     ),
   );
@@ -308,7 +308,7 @@ String _toPublicIdentifier(final String originalName) {
           return p;
         }
 
-        // Otherwise, only the first character of the piece should be capitalized.
+        // Otherwise, only capitalize the first character of the piece.
         return p.substring(0, 1).toUpperCase() + p.substring(1).toLowerCase();
       })
       .toList(growable: false);
@@ -393,7 +393,7 @@ final class LinguistLanguageEntry {
     required this.type,
   });
 
-  factory LinguistLanguageEntry.fromJson(Map<dynamic, dynamic> json) =>
+  factory LinguistLanguageEntry.fromJson(Map<Object?, Object?> json) =>
       _$LinguistLanguageEntryFromJson(json);
 
   /// Convert from the specified TextMate scope,
@@ -409,6 +409,7 @@ final class LinguistLanguageEntry {
 
 /// A collection of all Dart keywords, whether they are reserved or not.
 const _dartKeywords = {
+  'Function',
   'abstract',
   'as',
   'assert',
@@ -437,7 +438,6 @@ const _dartKeywords = {
   'final',
   'finally',
   'for',
-  'Function',
   'get',
   'hide',
   'if',
@@ -468,6 +468,7 @@ const _dartKeywords = {
   'throw',
   'true',
   'try',
+  'type',
   'typedef',
   'var',
   'void',
