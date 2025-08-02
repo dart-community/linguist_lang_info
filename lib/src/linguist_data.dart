@@ -218,7 +218,7 @@ abstract final class Language {
     extensions: ['.asl', '.dsl'],
     filenames: [],
     interpreters: [],
-    aceMode: 'text',
+    aceMode: 'asl',
     textMateScope: 'source.asl',
   );
 
@@ -340,6 +340,20 @@ abstract final class Language {
     linguistColor: '#315665',
     aceMode: 'text',
     textMateScope: 'source.agda',
+  );
+
+  /// The information provided by linguist about
+  /// the "Aiken" language or content type.
+  static const LanguageInfo aiken = LanguageInfo(
+    name: 'Aiken',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.ak'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#640ff8',
+    aceMode: 'text',
+    textMateScope: 'source.aiken',
   );
 
   /// The information provided by linguist about
@@ -471,7 +485,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#1797c0',
-    aceMode: 'java',
+    aceMode: 'apex',
     codeMirrorMode: 'clike',
     codeMirrorMimeType: 'text/x-java',
     textMateScope: 'source.apex',
@@ -571,7 +585,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#ff5a03',
-    aceMode: 'html',
+    aceMode: 'astro',
     codeMirrorMode: 'jsx',
     codeMirrorMimeType: 'text/jsx',
     textMateScope: 'source.astro',
@@ -688,7 +702,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#ff0000',
-    aceMode: 'text',
+    aceMode: 'basic',
     textMateScope: 'source.basic',
   );
 
@@ -787,7 +801,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#778899',
-    aceMode: 'tex',
+    aceMode: 'bibtex',
     codeMirrorMode: 'stex',
     codeMirrorMimeType: 'text/x-stex',
     textMateScope: 'text.bibtex',
@@ -876,7 +890,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#f7523f',
-    aceMode: 'text',
+    aceMode: 'php_laravel_blade',
     textMateScope: 'text.html.php.blade',
   );
 
@@ -1282,7 +1296,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#237346',
-    aceMode: 'text',
+    aceMode: 'csv',
   );
 
   /// The information provided by linguist about
@@ -1322,7 +1336,7 @@ abstract final class Language {
     filenames: ['cabal.config', 'cabal.project'],
     interpreters: [],
     linguistColor: '#483465',
-    aceMode: 'haskell',
+    aceMode: 'haskell_cabal',
     codeMirrorMode: 'haskell',
     codeMirrorMimeType: 'text/x-haskell',
     textMateScope: 'source.cabal',
@@ -1695,6 +1709,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Clue" language or content type.
+  static const LanguageInfo clue = LanguageInfo(
+    name: 'Clue',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.clue'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#0009b5',
+    aceMode: 'text',
+    textMateScope: 'source.clue',
+  );
+
+  /// The information provided by linguist about
   /// the "CoNLL-U" language or content type.
   static const LanguageInfo coNllU = LanguageInfo(
     name: 'CoNLL-U',
@@ -1878,7 +1906,7 @@ abstract final class Language {
     filenames: [],
     interpreters: ['crystal'],
     linguistColor: '#000100',
-    aceMode: 'ruby',
+    aceMode: 'crystal',
     codeMirrorMode: 'crystal',
     codeMirrorMimeType: 'text/x-crystal',
     textMateScope: 'source.crystal',
@@ -2010,6 +2038,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#34c0eb',
     aceMode: 'text',
+    codeMirrorMode: 'cypher',
+    codeMirrorMimeType: 'application/x-cypher-query',
     textMateScope: 'source.cypher',
   );
 
@@ -2167,6 +2197,20 @@ abstract final class Language {
     codeMirrorMode: 'dart',
     codeMirrorMimeType: 'application/dart',
     textMateScope: 'source.dart',
+  );
+
+  /// The information provided by linguist about
+  /// the "Daslang" language or content type.
+  static const LanguageInfo daslang = LanguageInfo(
+    name: 'Daslang',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.das'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#d3d3d3',
+    aceMode: 'text',
+    textMateScope: 'source.daslang',
   );
 
   /// The information provided by linguist about
@@ -2429,6 +2473,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#a91e50',
     aceMode: 'ejs',
+    codeMirrorMode: 'htmlembedded',
+    codeMirrorMimeType: 'application/x-ejs',
     textMateScope: 'text.html.js',
   );
 
@@ -2755,7 +2801,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#b845fc',
-    aceMode: 'text',
+    aceMode: 'fsharp',
     codeMirrorMode: 'mllike',
     codeMirrorMimeType: 'text/x-fsharp',
     textMateScope: 'source.fsharp',
@@ -2967,7 +3013,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#4d41b1',
-    aceMode: 'text',
+    aceMode: 'fortran',
     codeMirrorMode: 'fortran',
     codeMirrorMimeType: 'text/x-fortran',
     textMateScope: 'source.fortran',
@@ -2984,7 +3030,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#4d41b1',
-    aceMode: 'text',
+    aceMode: 'fortran',
     codeMirrorMode: 'fortran',
     codeMirrorMimeType: 'text/x-fortran',
     textMateScope: 'source.fortran.modern',
@@ -3144,6 +3190,20 @@ abstract final class Language {
     linguistColor: '#355570',
     aceMode: 'text',
     textMateScope: 'source.gdscript',
+  );
+
+  /// The information provided by linguist about
+  /// the "GDShader" language or content type.
+  static const LanguageInfo gdshader = LanguageInfo(
+    name: 'GDShader',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.gdshader', '.gdshaderinc'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#478CBF',
+    aceMode: 'glsl',
+    textMateScope: 'source.gdshader',
   );
 
   /// The information provided by linguist about
@@ -3418,7 +3478,9 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#5B2063',
-    aceMode: 'text',
+    aceMode: 'gherkin',
+    codeMirrorMode: 'gherkin',
+    codeMirrorMimeType: 'text/x-feature',
     textMateScope: 'text.gherkin.feature',
   );
 
@@ -3737,7 +3799,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#e10098',
-    aceMode: 'text',
+    aceMode: 'graphqlschema',
     textMateScope: 'source.graphql',
   );
 
@@ -3751,7 +3813,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#2596be',
-    aceMode: 'text',
+    aceMode: 'dot',
     textMateScope: 'source.dot',
   );
 
@@ -3812,7 +3874,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#844FBA',
-    aceMode: 'ruby',
+    aceMode: 'terraform',
     codeMirrorMode: 'ruby',
     codeMirrorMimeType: 'text/x-ruby',
     textMateScope: 'source.hcl',
@@ -3888,7 +3950,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#2e1052',
-    aceMode: 'text',
+    aceMode: 'html_ruby',
     codeMirrorMode: 'htmlmixed',
     codeMirrorMimeType: 'text/html',
     textMateScope: 'text.html.ecr',
@@ -3905,7 +3967,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#6e4a7e',
-    aceMode: 'text',
+    aceMode: 'html_elixir',
     codeMirrorMode: 'htmlmixed',
     codeMirrorMimeType: 'text/html',
     textMateScope: 'text.html.elixir',
@@ -3922,7 +3984,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#701516',
-    aceMode: 'text',
+    aceMode: 'html_ruby',
     codeMirrorMode: 'htmlembedded',
     codeMirrorMimeType: 'application/x-erb',
     textMateScope: 'text.html.erb',
@@ -3990,6 +4052,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#f68712',
     aceMode: 'text',
+    codeMirrorMode: 'haxe',
+    codeMirrorMimeType: 'text/x-hxml',
     textMateScope: 'source.hxml',
   );
 
@@ -4209,6 +4273,7 @@ abstract final class Language {
       '.cfg',
       '.cnf',
       '.dof',
+      '.frm',
       '.lektorproject',
       '.prefs',
       '.pro',
@@ -4612,7 +4677,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#267CB9',
-    aceMode: 'javascript',
+    aceMode: 'json5',
     codeMirrorMode: 'javascript',
     codeMirrorMimeType: 'application/json',
     textMateScope: 'source.js',
@@ -4630,7 +4695,7 @@ abstract final class Language {
     linguistColor: '#0c479c',
     aceMode: 'javascript',
     codeMirrorMode: 'javascript',
-    codeMirrorMimeType: 'application/json',
+    codeMirrorMimeType: 'application/ld+json',
     textMateScope: 'source.js',
   );
 
@@ -4870,8 +4935,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#a52a22',
     aceMode: 'django',
-    codeMirrorMode: 'django',
-    codeMirrorMimeType: 'text/x-django',
+    codeMirrorMode: 'jinja2',
+    codeMirrorMimeType: 'text/jinja2',
     textMateScope: 'text.html.django',
   );
 
@@ -5170,7 +5235,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#A97BFF',
-    aceMode: 'text',
+    aceMode: 'kotlin',
     codeMirrorMode: 'clike',
     codeMirrorMimeType: 'text/x-kotlin',
     textMateScope: 'source.kotlin',
@@ -5318,7 +5383,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#f2a542',
-    aceMode: 'smarty',
+    aceMode: 'latte',
     codeMirrorMode: 'smarty',
     codeMirrorMimeType: 'text/x-smarty',
     textMateScope: 'text.html.smarty',
@@ -5352,6 +5417,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Leo" language or content type.
+  static const LanguageInfo leo = LanguageInfo(
+    name: 'Leo',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.leo'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#C4FFC2',
+    aceMode: 'text',
+    textMateScope: 'source.leo',
+  );
+
+  /// The information provided by linguist about
   /// the "Less" language or content type.
   static const LanguageInfo less = LanguageInfo(
     name: 'Less',
@@ -5363,7 +5442,7 @@ abstract final class Language {
     linguistColor: '#1d365d',
     aceMode: 'less',
     codeMirrorMode: 'css',
-    codeMirrorMimeType: 'text/css',
+    codeMirrorMimeType: 'text/x-less',
     textMateScope: 'source.css.less',
   );
 
@@ -5574,7 +5653,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#295b9a',
-    aceMode: 'text',
+    aceMode: 'logtalk',
     textMateScope: 'source.logtalk',
   );
 
@@ -6478,7 +6557,7 @@ abstract final class Language {
     extensions: ['.nsi', '.nsh'],
     filenames: [],
     interpreters: [],
-    aceMode: 'text',
+    aceMode: 'nsis',
     codeMirrorMode: 'nsis',
     codeMirrorMimeType: 'text/x-nsis',
     textMateScope: 'source.nsis',
@@ -6626,10 +6705,24 @@ abstract final class Language {
     filenames: ['nginx.conf'],
     interpreters: [],
     linguistColor: '#009639',
-    aceMode: 'text',
+    aceMode: 'nginx',
     codeMirrorMode: 'nginx',
     codeMirrorMimeType: 'text/x-nginx-conf',
     textMateScope: 'source.nginx',
+  );
+
+  /// The information provided by linguist about
+  /// the "Nickel" language or content type.
+  static const LanguageInfo nickel = LanguageInfo(
+    name: 'Nickel',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.ncl'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#E0C3FC',
+    aceMode: 'text',
+    textMateScope: 'source.nickel',
   );
 
   /// The information provided by linguist about
@@ -6642,7 +6735,7 @@ abstract final class Language {
     filenames: ['nim.cfg'],
     interpreters: [],
     linguistColor: '#ffc200',
-    aceMode: 'text',
+    aceMode: 'nim',
     textMateScope: 'source.nim',
   );
 
@@ -6958,7 +7051,7 @@ abstract final class Language {
     linguistColor: '#6866fb',
     aceMode: 'objectivec',
     codeMirrorMode: 'clike',
-    codeMirrorMimeType: 'text/x-objectivec',
+    codeMirrorMimeType: 'text/x-objectivec++',
     textMateScope: 'source.objc++',
   );
 
@@ -6986,7 +7079,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#60AFFE',
-    aceMode: 'text',
+    aceMode: 'odin',
     textMateScope: 'source.odin',
   );
 
@@ -7354,7 +7447,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#dad8d8',
-    aceMode: 'sql',
+    aceMode: 'plsql',
     codeMirrorMode: 'sql',
     codeMirrorMimeType: 'text/x-plsql',
   );
@@ -7601,7 +7694,9 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#fcd7de',
-    aceMode: 'text',
+    aceMode: 'pig',
+    codeMirrorMode: 'pig',
+    codeMirrorMimeType: 'text/x-pig',
     textMateScope: 'source.pig_latin',
   );
 
@@ -7826,7 +7921,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#0c344b',
-    aceMode: 'text',
+    aceMode: 'prisma',
     textMateScope: 'source.prisma',
   );
 
@@ -7980,7 +8075,7 @@ abstract final class Language {
     filenames: ['Modulefile'],
     interpreters: [],
     linguistColor: '#302B6D',
-    aceMode: 'text',
+    aceMode: 'puppet',
     codeMirrorMode: 'puppet',
     codeMirrorMimeType: 'text/x-puppet',
     textMateScope: 'source.puppet',
@@ -8129,7 +8224,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#44a51c',
-    aceMode: 'text',
+    aceMode: 'qml',
     textMateScope: 'source.qml',
   );
 
@@ -8426,7 +8521,7 @@ abstract final class Language {
     filenames: [],
     interpreters: ['perl6', 'raku', 'rakudo'],
     linguistColor: '#0000fb',
-    aceMode: 'perl',
+    aceMode: 'raku',
     codeMirrorMode: 'perl',
     codeMirrorMimeType: 'text/x-perl',
     textMateScope: 'source.raku',
@@ -8464,7 +8559,7 @@ abstract final class Language {
     name: 'ReScript',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.res'],
+    extensions: ['.res', '.resi'],
     filenames: [],
     interpreters: ['ocaml'],
     linguistColor: '#ed5051',
@@ -8561,7 +8656,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#f50000',
-    aceMode: 'text',
+    aceMode: 'red',
     textMateScope: 'source.red',
   );
 
@@ -8695,7 +8790,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#00c0b5',
-    aceMode: 'text',
+    aceMode: 'robot',
     textMateScope: 'text.robot',
   );
 
@@ -9012,7 +9107,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#0C4597',
-    aceMode: 'text',
+    aceMode: 'sparql',
     codeMirrorMode: 'sparql',
     codeMirrorMimeType: 'application/sparql-query',
     textMateScope: 'source.sparql',
@@ -9162,7 +9257,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#ff9900',
-    aceMode: 'xml',
+    aceMode: 'svg',
     codeMirrorMode: 'xml',
     codeMirrorMimeType: 'text/xml',
     textMateScope: 'text.xml.svg',
@@ -9174,7 +9269,7 @@ abstract final class Language {
     name: 'SWIG',
     type: LanguageType.programming,
     aliases: [],
-    extensions: ['.i'],
+    extensions: ['.i', '.swg', '.swig'],
     filenames: [],
     interpreters: [],
     aceMode: 'c_cpp',
@@ -9573,7 +9668,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#2b2b2b',
-    aceMode: 'text',
+    aceMode: 'slim',
     codeMirrorMode: 'slim',
     codeMirrorMimeType: 'text/x-slim',
     textMateScope: 'text.slim',
@@ -9662,7 +9757,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#c44536',
-    aceMode: 'text',
+    aceMode: 'smithy',
     codeMirrorMode: 'clike',
     codeMirrorMimeType: 'text/x-csrc',
     textMateScope: 'source.smithy',
@@ -9751,7 +9846,7 @@ abstract final class Language {
     linguistColor: '#800000',
     aceMode: 'c_cpp',
     codeMirrorMode: 'clike',
-    codeMirrorMimeType: 'text/x-c++src',
+    codeMirrorMimeType: 'text/x-squirrel',
     textMateScope: 'source.nut',
   );
 
@@ -9781,7 +9876,7 @@ abstract final class Language {
     linguistColor: '#dc566d',
     aceMode: 'text',
     codeMirrorMode: 'mllike',
-    codeMirrorMimeType: 'text/x-ocaml',
+    codeMirrorMimeType: 'text/x-sml',
     textMateScope: 'source.ml',
   );
 
@@ -9851,6 +9946,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#ff6347',
     aceMode: 'stylus',
+    codeMirrorMode: 'stylus',
+    codeMirrorMimeType: 'text/x-styl',
     textMateScope: 'source.stylus',
   );
 
@@ -9965,7 +10062,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#F05138',
-    aceMode: 'text',
+    aceMode: 'swift',
     codeMirrorMode: 'swift',
     codeMirrorMimeType: 'text/x-swift',
     textMateScope: 'source.swift',
@@ -10089,7 +10186,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#237346',
-    aceMode: 'text',
+    aceMode: 'tsv',
     textMateScope: 'source.generic-db',
   );
 
@@ -10103,9 +10200,9 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#3178c6',
-    aceMode: 'javascript',
+    aceMode: 'tsx',
     codeMirrorMode: 'jsx',
-    codeMirrorMimeType: 'text/jsx',
+    codeMirrorMimeType: 'text/typescript-jsx',
     textMateScope: 'source.tsx',
     group: 'TypeScript',
   );
@@ -10386,6 +10483,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Tor Config" language or content type.
+  static const LanguageInfo torConfig = LanguageInfo(
+    name: 'Tor Config',
+    type: LanguageType.data,
+    aliases: ['torrc'],
+    extensions: [],
+    filenames: ['torrc'],
+    interpreters: [],
+    linguistColor: '#59316b',
+    aceMode: 'apache_conf',
+    textMateScope: 'source.torrc',
+  );
+
+  /// The information provided by linguist about
   /// the "Tree-sitter Query" language or content type.
   static const LanguageInfo treeSitterQuery = LanguageInfo(
     name: 'Tree-sitter Query',
@@ -10422,7 +10533,7 @@ abstract final class Language {
     extensions: ['.ttl'],
     filenames: [],
     interpreters: [],
-    aceMode: 'text',
+    aceMode: 'turtle',
     codeMirrorMode: 'turtle',
     codeMirrorMimeType: 'text/turtle',
     textMateScope: 'source.turtle',
@@ -10589,6 +10700,20 @@ abstract final class Language {
   );
 
   /// The information provided by linguist about
+  /// the "Untyped Plutus Core" language or content type.
+  static const LanguageInfo untypedPlutusCore = LanguageInfo(
+    name: 'Untyped Plutus Core',
+    type: LanguageType.programming,
+    aliases: [],
+    extensions: ['.uplc'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#36adbd',
+    aceMode: 'text',
+    textMateScope: 'source.uplc',
+  );
+
+  /// The information provided by linguist about
   /// the "UrWeb" language or content type.
   static const LanguageInfo urWeb = LanguageInfo(
     name: 'UrWeb',
@@ -10644,7 +10769,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#15dcdc',
-    aceMode: 'text',
+    aceMode: 'vbscript',
     codeMirrorMode: 'vbscript',
     codeMirrorMimeType: 'text/vbscript',
     textMateScope: 'source.vbnet',
@@ -10731,6 +10856,20 @@ abstract final class Language {
     codeMirrorMode: 'velocity',
     codeMirrorMimeType: 'text/velocity',
     textMateScope: 'source.velocity',
+  );
+
+  /// The information provided by linguist about
+  /// the "Vento" language or content type.
+  static const LanguageInfo vento = LanguageInfo(
+    name: 'Vento',
+    type: LanguageType.markup,
+    aliases: [],
+    extensions: ['.vto'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ff0080',
+    aceMode: 'text',
+    textMateScope: 'source.vento',
   );
 
   /// The information provided by linguist about
@@ -10864,7 +11003,9 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#41b883',
-    aceMode: 'html',
+    aceMode: 'vue',
+    codeMirrorMode: 'vue',
+    codeMirrorMimeType: 'text/x-vue',
     textMateScope: 'source.vue',
   );
 
@@ -10877,7 +11018,7 @@ abstract final class Language {
     extensions: ['.vy'],
     filenames: [],
     interpreters: [],
-    linguistColor: '#2980b9',
+    linguistColor: '#9F4CF2',
     aceMode: 'text',
     textMateScope: 'source.vyper',
   );
@@ -10961,8 +11102,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#04133b',
     aceMode: 'lisp',
-    codeMirrorMode: 'commonlisp',
-    codeMirrorMimeType: 'text/x-common-lisp',
+    codeMirrorMode: 'wast',
+    codeMirrorMimeType: 'text/webassembly',
     textMateScope: 'source.webassembly',
   );
 
@@ -11048,7 +11189,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#fc5757',
-    aceMode: 'text',
+    aceMode: 'mediawiki',
     textMateScope: 'text.html.mediawiki',
   );
 
@@ -11107,7 +11248,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#a23738',
-    aceMode: 'text',
+    aceMode: 'wollok',
     textMateScope: 'source.wollok',
   );
 
@@ -11302,6 +11443,7 @@ abstract final class Language {
       '.scxml',
       '.sfproj',
       '.shproj',
+      '.slnx',
       '.srdf',
       '.storyboard',
       '.sublime-snippet',
@@ -11671,7 +11813,7 @@ abstract final class Language {
     extensions: ['.zeek', '.bro'],
     filenames: [],
     interpreters: [],
-    aceMode: 'text',
+    aceMode: 'zeek',
     textMateScope: 'source.zeek',
   );
 
@@ -11713,7 +11855,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#ec915c',
-    aceMode: 'text',
+    aceMode: 'zig',
     textMateScope: 'source.zig',
   );
 
@@ -11728,6 +11870,20 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#d67711',
     aceMode: 'text',
+  );
+
+  /// The information provided by linguist about
+  /// the "Zmodel" language or content type.
+  static const LanguageInfo zmodel = LanguageInfo(
+    name: 'Zmodel',
+    type: LanguageType.data,
+    aliases: [],
+    extensions: ['.zmodel'],
+    filenames: [],
+    interpreters: [],
+    linguistColor: '#ff7100',
+    aceMode: 'text',
+    textMateScope: 'source.zmodel',
   );
 
   /// The information provided by linguist about
@@ -11816,7 +11972,7 @@ abstract final class Language {
     interpreters: [],
     aceMode: 'clojure',
     codeMirrorMode: 'clojure',
-    codeMirrorMimeType: 'text/x-clojure',
+    codeMirrorMimeType: 'application/edn',
     textMateScope: 'source.clojure',
   );
 
@@ -12004,6 +12160,8 @@ abstract final class Language {
     interpreters: [],
     linguistColor: '#0040cd',
     aceMode: 'text',
+    codeMirrorMode: 'q',
+    codeMirrorMimeType: 'text/x-q',
     textMateScope: 'source.q',
   );
 
@@ -12017,7 +12175,7 @@ abstract final class Language {
     filenames: [],
     interpreters: [],
     linguistColor: '#141414',
-    aceMode: 'text',
+    aceMode: 'rst',
     codeMirrorMode: 'rst',
     codeMirrorMimeType: 'text/x-rst',
     textMateScope: 'text.restructuredtext',

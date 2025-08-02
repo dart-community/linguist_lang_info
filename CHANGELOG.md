@@ -1,3 +1,7 @@
+## 0.2.1-wip
+
+- Update linguist to `main` branch, and regenerate index and data.
+
 ## 0.2.0
 
 - Require Dart 3.8 or later.
@@ -15,6 +19,6 @@
 
 ## 0.0.1
 
-- Initial release, currently up-to-date with v7.27.0 of linguist.
+- Initial release, currently up to date with v7.27.0 of linguist.
   Looking for feedback on the package's API and
   if any utility functions should be provided.
